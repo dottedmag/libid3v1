@@ -1,4 +1,6 @@
 /*
+ * libid3v1 (http://libid3v1.dottedmag.net/)
+ *
  * Copyright (c) 2006 Mikhail Gusarov <dottedmag@dottedmag.net>
  *
  * Permission is hereby granted, free of charge, to any person
