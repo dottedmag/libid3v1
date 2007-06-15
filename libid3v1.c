@@ -35,12 +35,8 @@
 #define ID3V1_HEADER_LENGTH 3
 #define ID3V1_HEADER "TAG"
 
-#include <stdio.h>
-
 int read_all(int fh, char* buf, size_t size)
 {
-    char* curr = buf;
-
     while(size > 0) {
         ssize_t read_ = read(fh, buf, size);
         if (read_ == -1 && (errno == EAGAIN || errno == EINTR)) continue;
