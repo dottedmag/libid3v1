@@ -94,7 +94,7 @@ static char* genres[] = {
   "Club", "Tango", "Samba", "Folklore"
 };
 
-const char* id3v1_get_genre(short genre)
+const char* id3v1_genre_name(short genre)
 {
   if (genre < 0 || genre >= sizeof(genres) / sizeof(genres[0])) return NULL;
   return genres[genre];

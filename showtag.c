@@ -34,7 +34,7 @@ int main(int argc, char** argv)
             if (tag.genre == -1) {
                 printf("genre: *none*\n");
             } else {
-                printf("genre: %s\n", id3v1_get_genre(tag.genre));
+                printf("genre: %s\n", id3v1_genre_name(tag.genre));
             }
             if (tag.track) {
                 printf("track: %hd\n", tag.track);
