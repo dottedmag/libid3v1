@@ -53,6 +53,12 @@ int main(int argc, char** argv)
                 perror(argv[0]);
             continue;
         }
+
+        if (-1 == close(fh)) {
+            perror(argv[0]);
+            continue;
+        }
+        
         if (res == 0) {
             printf("%s: No ID3V1 tag found\n", argv[i]);
         } else {
