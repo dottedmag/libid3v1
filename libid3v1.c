@@ -1,7 +1,7 @@
 /*
  * libid3v1 (http://libid3v1.dottedmag.net/)
  *
- * Copyright (c) 2006 Mikhail Gusarov <dottedmag@dottedmag.net>
+ * Copyright (c) 2006,2007 Mikhail Gusarov <dottedmag@dottedmag.net>
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -85,13 +85,18 @@ static char* genres[] = {
   "Southern Rock", "Comedy", "Cult", "Gangsta", "Top 40", "Christian Rap",
   "Pop/Funk", "Jungle", "Native American", "Cabaret", "New Wave", "Psychedelic",
   "Rave", "Showtunes", "Trailer", "Lo-Fi", "Tribal", "Acid Punk", "Acid Jazz",
-  "Polka", "Retro", "Musical", "Rock & Roll", "Hard Rock", "Folk", "Folk/Rock",
-  "National Folk", "Swing", "Bebob", "Latin", "Revival", "Celtic", "Bluegrass",
-  "Avantgarde", "Gothic Rock", "Progressive Rock", "Psychedelic Rock",
-  "Symphonic Rock", "Slow Rock", "Big Band", "Chorus", "Easy Listening",
-  "Acoustic", "Humour", "Speech", "Chanson", "Opera", "Chamber Music", "Sonata",
-  "Symphony", "Booty Bass", "Primus", "Porn Groove", "Satire", "Slow Jam",
-  "Club", "Tango", "Samba", "Folklore"
+  "Polka", "Retro", "Musical", "Rock & Roll", "Hard Rock",
+
+  /* The following genres are Winamp extenisons */
+
+  "Folk", "Folk/Rock", "National Folk", "Swing", "Fast Fusion", "Bebob",
+  "Latin", "Revival", "Celtic", "Bluegrass", "Avantgarde", "Gothic Rock",
+  "Progressive Rock", "Psychedelic Rock", "Symphonic Rock", "Slow Rock",
+  "Big Band", "Chorus", "Easy Listening", "Acoustic", "Humour", "Speech",
+  "Chanson", "Opera", "Chamber Music", "Sonata", "Symphony", "Booty Bass",
+  "Primus", "Porn Groove", "Satire", "Slow Jam", "Club", "Tango", "Samba",
+  "Folklore", "Ballad", "Power Ballad", "Rhytmic Soul", "Freestyle", "Duet",
+  "Punk Rock", "Drum Solo", "A Capella", "Euro-House", "Dance Hall"
 };
 
 const char* id3v1_genre_name(short genre)
