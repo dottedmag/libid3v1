@@ -4,7 +4,7 @@
 /*
  * libid3v1 (http://libid3v1.dottedmag.net/)
  * 
- * Copyright (c) 2006 Mikhail Gusarov <dottedmag@dottedmag.net>
+ * Copyright (c) 2006,2007 Mikhail Gusarov <dottedmag@dottedmag.net>
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -32,10 +32,10 @@ extern "C" {
 #endif
 
 /*
- * This struct represents ID3v1 tag.
+ * This structure represents ID3v1 tag.
  *
- * missing genre is '-1' in .genre field
- * missing track number is '0' in .track field
+ * missing genre is -1 in .genre field
+ * missing track number is 0 in .track field
  */
 
 typedef struct _id3v1_t
@@ -50,17 +50,16 @@ typedef struct _id3v1_t
 } id3v1_t;
 
 /*
- * Parses the ID3v1 tag and fills the provided struct. Name of genre
- * may be obtained using id3v1_genre_name. If no track information
- * present, .track will be set to 0. No charset conversion is
- * performed, data is read as is.
+ * Parses the ID3v1 tag and fills the provided struct. Name of genre may be
+ * obtained by using id3v1_genre_name. If no track information present, .track
+ * will be set to 0. No charset conversion is performed, data is read as is.
  *
  * Tag is read from the end of fh provided.
  *
  * Returns
  * 1 if ID3v1 tag is present in file (filling the provided struct),
  * 0 if tag is not present,
- * -1 if error occured during read (check the errno for the reason)
+ * -1 if error occured during read (check the errno for the reason).
  */
 
 int id3v1_parse(int fh, id3v1_t* tag);
@@ -69,7 +68,7 @@ int id3v1_parse(int fh, id3v1_t* tag);
  * Gets the genre name by the ID3v1 genre number. Returned string is
  * statically allocated and hence must not be freed by caller.
  *
- * Returns NULL if invalid number passed
+ * Returns NULL if invalid number is passed
  */
 
 const char* id3v1_genre_name(short genre);
